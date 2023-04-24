@@ -8,7 +8,7 @@ if(isset($_GET['token'])){
 
     if(mysqli_num_rows($verify_query_run)>0){
         $row = mysqli_fetch_array($verify_query_run);
-     //   echo $row['verifyToken'];
+    //    echo $row['verifyToken'];
 
       if($row['verifyStatus'] == "Not Yet Verified"){
             $clickedToken = $row['verifyToken'];

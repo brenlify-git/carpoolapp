@@ -14,7 +14,7 @@ function sendemail_verify($firstName, $email, $verify_token){
     $mail = new PHPMailer(true);
 
     $mail->isSMTP();  
-    $mail->SMTPAuth   = true; 
+    $mail->SMTPAuth = true; 
 
     $mail->Host = 'smtp.gmail.com'; 
     $mail->Username = 'brenlify.mail@gmail.com';

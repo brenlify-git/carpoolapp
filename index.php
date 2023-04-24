@@ -89,7 +89,7 @@ session_start();
     <div class="imgheader">
         <div class="headerhey">
 
-            Welcome, Carpoolers!
+            Welcome, Ridesharers!
             <h4>Register your details here.</h4>
         </div>
     </div>
