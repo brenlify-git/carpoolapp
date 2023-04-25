@@ -13,7 +13,7 @@ session_start();
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/RideShare.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -38,45 +38,41 @@ session_start();
         .headerhey {
             padding: 30px;
             text-align: center;
-            background-color: #303030;
-            background-image: linear-gradient(241deg, #303030 0%, #1a266d 100%);
-
+            background: rgb(2,1,17);
+background: linear-gradient(90deg, rgba(2,1,17,1) 0%, rgba(60,60,69,1) 65%);
             font-family: 'Poppins', sans-serif;
             color: white;
-            font-size: 50px;
+            font-size: 35px;
         }
 
+        button {
+        background: #FBCA1F;
+        font-family: inherit;
+        padding: 0.6em 1.3em;
+        font-weight: 900;
+        font-size: 18px;
+        border: 3px solid black;
+        border-radius: 0.4em;
+        box-shadow: 0.1em 0.1em;
+        margin: 10px;
+        }
 
-        .button {
-            --width: 190px;
-            --timing: 2s;
-            border: 0;
-            width: var(--width);
-            padding-block: 1em;
-            color: #fff;
-            font-weight: bold;
-            font-size: 1em;
-            background: rgb(0, 116, 189);
-            transition: all 0.2s;
-            border-radius: 7px;
-            margin: 10px;
+        button:hover {
+        transform: translate(-0.05em, -0.05em);
+        box-shadow: 0.15em 0.15em;
+        }
+
+        button:active {
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
         }
 
         .resetbtn {
             background: rgb(247, 150, 70);
+            width: 130px;
         }
 
-        .button:hover {
-            background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
-            animation: var(--timing) linear dance6123 infinite;
-            transform: scale(1.1) translateY(-1px);
-        }
-
-        @keyframes dance6123 {
-            to {
-                background-position: var(--width);
-            }
-        }
+      
     </style>
 
     <script src="https://code.jquery.com/jquery-1.8.2.js"></script>
@@ -88,9 +84,10 @@ session_start();
 
     <div class="imgheader">
         <div class="headerhey">
-
+            <img src="assets/img/RideShare.png" style="width:200px">
+            <br>  
             Welcome, Ridesharers!
-            <h4>Register your details here.</h4>
+            <h6>Register your details here.</h6>
         </div>
     </div>
    
@@ -172,22 +169,22 @@ if(isset($_SESSION['status'])){
                                 </div>
                                
                                
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <label for="inputAddress5" class="form-label">Street</label>
                                     <input type="text" class="form-control" id="street" placeholder="Adamya"
                                         name="street" required>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <label for="inputAddress5" class="form-label">Barangay</label>
                                     <input type="text" class="form-control" id="barangay" placeholder="Caniogan"
                                         name="barangay" required>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <label for="inputAddress5" class="form-label">Municipality</label>
                                     <input type="text" class="form-control" id="municipality" placeholder="Baliwag City"
                                         name="municipality" required>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <label for="inputAddress5" class="form-label">Province</label>
                                     <input type="text" class="form-control" id="province" placeholder="Bulacan"
                                         name="province" required>
@@ -203,8 +200,7 @@ if(isset($_SESSION['status'])){
                                         name="password" required>
                                 </div>
                                 <div class="text-center">
-                                    <input type="submit" name="register_btn" class="btn btn-secondary button" id="register"
-                                        value="Register Now!"></input>
+                                    <button type="submit" name="register_btn"  id="register">Register   </button>
                                     <button type="reset" class="resetbtn button">Reset</button>
                                 </div>
                             </form><!-- End Multi Columns Form -->

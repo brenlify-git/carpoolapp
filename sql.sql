@@ -289,6 +289,4 @@ GROUP BY carDriver.driverID
 ORDER BY TotalBookings DESC;
 
 
-
-
 #gh
